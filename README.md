@@ -39,3 +39,15 @@ Next, I've completed the t-tests for each lot separatly:
 Here we can see that for lot 1 `p-value = 1`, so the mean of suspension coils is the same as the population mean.
 For lot 2 `p-value = 0.6072`. That is above the significance level, so the mean of suspension coils for lot 2 is similar to the population mean as well.
 For lot 3 `p-value = 0.04168`. It is below the significance level, so we reject the null hypothesis. The mean of suspension coils for lot 3 is statistically different from the population mean.
+
+## Study Design: MechaCar vs Competition
+To compare MechaCar with competitors, I would focus on such important metric for customers as maintenance cost. 
+In that case, a null hypothesis is that there is no statistical difference between mean of maintenance cost for MechaCar and a competitor. Significance level should be 0.05%.
+To prove or reject hypothesis I would run two sample t-test as we have two datasets with similar metric and values are continuous. 
+` t.test(MechaCar$maintenance_cost, competitor$maintenance_cost, paired=TRUE)`
+
+If, as a result, p-value is above 0.05, maintenance cost for MechaCar is similar to competitors, otherwise we can calculate mean for both datasets and discover maintenance cost is higher or lower than competitors'.
+
+To perform the test, I would require historical data from official dealer services with maintenance_cost for each car.
+
+
