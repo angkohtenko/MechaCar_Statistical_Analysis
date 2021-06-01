@@ -26,3 +26,13 @@ lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mea
                                                                              SD = sd(PSI))
 lot_summary
 
+# t-test
+t.test(suspension_coil$PSI, mu=1500)
+
+# t-test for each lot
+t.test(subset(suspension_coil$PSI, suspension_coil$Manufacturing_Lot == "Lot1"), mu=1500)
+t.test(subset(suspension_coil$PSI, suspension_coil$Manufacturing_Lot == "Lot2"), mu=1500)
+t.test(subset(suspension_coil$PSI, suspension_coil$Manufacturing_Lot == "Lot3"), mu=1500)
+
+
+
