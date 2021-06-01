@@ -2,7 +2,7 @@
 
 
 ## Linear Regression to Predict MPG
-First of all, I've built multiple linear regression model to predict MPG using `lm()` function. I've used vehicle length, weight, spoiler angle, ground clearance and AWD (drivetrain) as independents variables. 
+I've built multiple linear regression model to predict MPG using `lm()` function. I've used vehicle length, weight, spoiler angle, ground clearance and AWD (drivetrain) as independents variables. 
 
 ![linear_regression](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/Linear_regression_summary.png)
 
@@ -22,3 +22,20 @@ Although, if we look at variance by lots, we can see that suspension coils varia
 
 ![lot_summary](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/lot_summary.png)
 
+## T-Tests on Suspension Coils
+To determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch, I performed t-tests.
+At first, I've performed t-test for the PSI across all manufacturing lots and got next results:
+
+![t-test](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/one_sample_t.test.png)
+
+`p-value = 0.06028` is above a significance level of 0.05%. Therefore, we do not reject the null hypothesis and can state that the mean of suspension coils is similar to the population mean of 1,500 pounds per square inch.
+
+Next, I've completed the t-tests for each lot separatly:
+
+![t-test1](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/t.test_lot1.png)
+![t-test2](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/t.test_lot2.png)
+![t-test3](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/t.test_lot3.png)
+
+Here we can see that for lot 1 `p-value = 1`, so the mean of suspension coils is the same as the population mean.
+For lot 2 `p-value = 0.6072`. That is above the significance level, so the mean of suspension coils for lot 2 is similar to the population mean as well.
+For lot 3 `p-value = 0.04168`. It is below the significance level, so we reject the null hypothesis. The mean of suspension coils for lot 3 is statistically different from the population mean.
