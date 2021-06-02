@@ -4,7 +4,7 @@ I got 2 datasets to analize related to MechaCars prototype vehicles:
 - [Suspension_Coil.csv](https://raw.githubusercontent.com/angkohtenko/MechaCar_Statistical_Analysis/main/Suspension_Coil.csv) contains the results from multiple production lots. The weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots.
 
 ## Linear Regression to Predict MPG
-I've built multiple linear regression model to predict MPG using `lm()` function. I've used vehicle length, weight, spoiler angle, ground clearance and AWD (drivetrain) as independents variables. 
+I've built multiple linear regression model to predict MPG using `lm()` function. I've used vehicle length, weight, spoiler angle, ground clearance and AWD (drivetrain) as independent variables. 
 
 ![linear_regression](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/Linear_regression_summary.png)
 
@@ -28,7 +28,7 @@ Although, if we look at variance by lots, we can see that suspension coils varia
 
 ## T-Tests on Suspension Coils
 To determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch, I performed t-tests.
-At first, I've performed t-test for the PSI across all manufacturing lots and got next results:
+At first, I've performed t-test for suspension coils across all manufacturing lots and got next results:
 
 ![t-test](https://github.com/angkohtenko/MechaCar_Statistical_Analysis/blob/main/Images/one_sample_t.test.png)
 
@@ -53,7 +53,7 @@ To prove or reject hypothesis I would run two sample t-test as we have two datas
 
 ` t.test(MechaCar$maintenance_cost, competitor$maintenance_cost, paired=TRUE)`
 
-If, as a result, p-value is above 0.05, maintenance cost for MechaCar is similar to competitors, otherwise we can calculate mean for both datasets and discover maintenance cost is higher or lower than competitors'.
+If, as a result, p-value is above 0.05, maintenance cost for MechaCar is similar to competitors, otherwise we can calculate mean for both datasets and discover whether maintenance cost is higher or lower than competitors'.
 
 To perform the test, I would require historical data from official dealer services with maintenance_cost for each car.
 
